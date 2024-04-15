@@ -1,0 +1,2 @@
+sample,fastq_1,fastq_2,strandedness
+sample_1_name,/path/to/sample1_fast_read1.fastqc,/path/to/sample1_fastq_read2.fastqc,A

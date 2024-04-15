@@ -1,0 +1,6 @@
+input: '/path/to/samplesheet/here'
+outdir: 'path/to/where/you/want/results/here'
+fasta: '/path/to/human_refs/GRCh38.p14.genome.fa.gz'
+gtf: '/path/to/human_refs/gencode.v45.annotation.gtf.gz'
+save_reference: true
+with_umi: false
