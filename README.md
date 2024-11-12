@@ -1,4 +1,4 @@
-# NextFlow_UNC_Longleaf
+# UNC_Longleaf
 
 High performance computing at UNC happens on several clusters, one of which is Longleaf. Longleaf is a linux-based computing system with resources managed through a fair-share algorithm using SLURM as the resource manager.  
 
