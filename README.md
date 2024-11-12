@@ -9,10 +9,20 @@ You can ssh into longleaf using your UNC credentials in your chosen terminal app
 ```
 ssh -X <onyen@longleaf.unc.edu>
 ```
-On a windows based system (like me!) I prefer to use MobaXTerm to interact with the cluster via CLI. To use MobaXTerm,  use the session icon to create a Longleaf SSH session using longleaf.unc.edu for "Remote Host" and your onyen for the "username". Leae port at 22. 
-
+On a windows based system (like me!) I prefer to use MobaXTerm to interact with the cluster via CLI. To use MobaXTerm,  use the session icon to create a Longleaf SSH session using longleaf.unc.edu for "Remote Host" and your onyen for the "username". Leave port at 22. 
 
 Great!!! You're in!!
+
+Let's talk about some basics. First, Longleaf is a module based computing system, to view the available modules, type 
+```
+modules avail
+```
+
+To access and use modules, we simply need to load them into our environment, using the load command 
+```
+module load module_name
+```
+
 
 To get started working on longleaf, begin a tmux session with 
 ```
