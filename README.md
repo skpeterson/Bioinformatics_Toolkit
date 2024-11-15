@@ -23,8 +23,12 @@ To access and use modules, we simply need to load them into our environment, usi
 module load module_name
 ```
 
-
 To get started working on longleaf, begin a tmux session with 
 ```
 tmux new -s session_name
+```
+
+Up until now we have been working on a log-in node, which is fine for moving small files, and cd-ing around directories. We however, cannot do any computation on the log-in nodes as they don't have enough resources. We can get assigned to a node by starting an interactive session using the follow command 
+```
+
 ```
