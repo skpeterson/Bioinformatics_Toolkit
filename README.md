@@ -34,7 +34,7 @@ tmux new -s <<session_name>>
 
 A couple of notes on tmux sessions. First, they are useful because they allow you're interactive sessions to keep running even when you disconnect.This allows you to work on a remote system (longleaf) without worrying about maintaining the SSH connection we made. To detach from a tmux session (but keep the tmux session running in the background) type ctrl + b, d. Then when you're ready to re-connect, you can use 
 ```
-tmux -at t session_name
+tmux at -t session_name
 ```
 **Note: You'll need to be on the same node you initialized the session from, if you're not, you can type (change the -login# accordingly  
 ```
