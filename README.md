@@ -37,18 +37,24 @@ tmux -at t session_name
 ssh onyen@longleaf-login4
 ```
 
-Up until now we have been working on a log-in node, which is fine for moving small files, and cd-ing around directories. We however, cannot do any computation on the log-in nodes as they don't have enough resources. We can get assigned to a node by starting an interactive session using the follow command 
+Up until now we have been working on a log-in node, which is fine for moving small files, and cd-ing around directories. We however, cannot do any computation on the log-in nodes as they don't have enough resources. We can get assigned to a node by starting an interactive session using the following command 
 ```
 srun -t 5:00:00 -p interact -N 1 -n 1 --mem=8g --x11=first --pty /bin/bash
 ```
 
 this will start an interactive session where:
--t = 5 hours 
--p interactive node 
--N = one node
--n = one cpu
---mem = 8g of memory allocated
---pty = bash
+-t = 5 hours \
+-p interactive node \
+-N = one node \
+-n = one cpu \
+--mem = 8g of memory allocated \
+--pty = bash \
+
+I personally don't like to have to remember this command, so instead, I made a script which contains only that line, saved it as start.sh (run_script), and run it (only once you'll need to make the script executable using chmod +x start.sh) 
+```
+bash start.sh
+```
+
 
 To summarize, you have now
 1. Logged into longleaf
@@ -56,4 +62,4 @@ To summarize, you have now
 3. Started a tmux session
 4. Started an interactive session
 
-You are now ready to kick off jobs and do 
+You are now ready to kick off jobs and do stellar computational work! Happy science-ing!!
