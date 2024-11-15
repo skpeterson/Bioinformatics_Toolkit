@@ -17,18 +17,22 @@ Let's talk about some basics. First, Longleaf is a module based computing system
 ```
 module avail
 ```
+and to view the versions of module or search within module space if you don't know the exact name of the module you want 
+```
+module spider <<module_name>>
+```
 
 To access and use modules, we simply need to load them into our environment, using the load command 
 ```
-module load module_name
+module load <<module_name>>
 ```
 
 To get started working on longleaf, begin a tmux session with 
 ```
-tmux new -s session_name
+tmux new -s <<session_name>>
 ```
 
-A couple of notes on tmux sessions. To disconnet from a tmux session (but keep the tmux session running in the background) type ctrl + b, d. Then when you're ready to re-connect, you can use 
+A couple of notes on tmux sessions. First, they are useful because they allow you're interactive sessions to keep running even when you disconnect.This allows you to work on a remote system (longleaf) without worrying about maintaining the SSH connection we made. To detach from a tmux session (but keep the tmux session running in the background) type ctrl + b, d. Then when you're ready to re-connect, you can use 
 ```
 tmux -at t session_name
 ```
@@ -43,12 +47,12 @@ srun -t 5:00:00 -p interact -N 1 -n 1 --mem=8g --x11=first --pty /bin/bash
 ```
 
 this will start an interactive session where:
--t = 5 hours \
--p interactive node \
--N = one node \
--n = one cpu \
+-t 5:00:00 = 5 hour session, HH:MIN:SEC \
+-p interact = the type of node, in this case, an interactive  node \
+-N 1 = how many nodes do you want, in this case, one compute node \
+-n 1 = how many computers you want on that node, in this case, 1 \
 --mem = 8g of memory allocated \
---pty = bash \
+--pty bash = pseudo terminal to run bash scripts in \
 
 I personally don't like to have to remember this command, so instead, I made a script which contains only that line, saved it as start.sh (run_script), and run it (only once you'll need to make the script executable using chmod +x start.sh) 
 ```
