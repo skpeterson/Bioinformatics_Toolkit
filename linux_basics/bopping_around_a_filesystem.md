@@ -24,7 +24,8 @@ cd ./dir/we/want/to/be/in
 We can also move backwards in our directories. We do this using two dots ```..``` for each level we want to go back. So this command would us from ```/dir/we/want/to/be/in``` to ```/dir/we/want/to/be``` 
 ```
 cd ..
-``
+``` 
+
 ## Seeing what's inside
 
 Now we are in the directory we want, and we would like to see it's contents.
